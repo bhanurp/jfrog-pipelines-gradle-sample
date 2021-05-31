@@ -45,6 +45,6 @@ resources:
     configuration:
       sourceArtifactory: Artifactory
 #      repository: jerome-docker-prod-local
-      repository: jerome-docker-prod-local
+      repository: docker-local
       chart: pipelines-sample
       version: 1.0.0
