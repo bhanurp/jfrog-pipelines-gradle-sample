@@ -4,7 +4,7 @@ resolver:
   repo: jerome-gradle-remote
   serverId: Artifactory
 deployer:
-  repo: jerome-gradle-dev-local
+  repo: jerome--gradle-dev-local
   serverId: Artifactory
   deployMavenDescriptors: true
   ivyPattern: '[organization]/[module]/ivy-[revision].xml'
