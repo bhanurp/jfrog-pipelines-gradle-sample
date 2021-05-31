@@ -44,6 +44,7 @@ resources:
     type: HelmChart
     configuration:
       sourceArtifactory: Artifactory
+#      repository: jerome-docker-prod-local
       repository: jerome-docker-prod-local
       chart: pipelines-sample
       version: 1.0.0
