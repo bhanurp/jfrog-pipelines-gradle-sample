@@ -24,7 +24,7 @@ pipelines:
           outputResources:
             - name: jerome_build_info_gradle
           integrations:
-            - name: Artifactory
+            - name: myArtifactory
         execution:
           onStart:
             - java -version
@@ -60,7 +60,7 @@ pipelines:
             - name: jerome_github_resources
             - name: gradle_app
           integrations:
-            - name: Artifactory
+            - name: myArtifactory
 
       - name: docker_push
         type: DockerPush
@@ -74,7 +74,7 @@ pipelines:
           outputResources:
             - name: jerome_build_info_docker
           integrations:
-            - name: Artifactory
+            - name: myArtifactory
           inputSteps:
             - name: docker_build
         execution:
