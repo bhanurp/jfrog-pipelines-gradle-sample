@@ -34,7 +34,7 @@ pipelines:
         type: PromoteBuild
         configuration:
 #          targetRepository:      jerome-gradle-prod-local
-          targetRepository:      jerome--gradle-dev-local
+          targetRepository:      gradle-dev-local
           includeDependencies:   true
           status:                'Approved'
           comment:               'Ready for production'
