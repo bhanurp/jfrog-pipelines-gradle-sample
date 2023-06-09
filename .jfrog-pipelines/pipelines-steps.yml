@@ -22,6 +22,9 @@ pipelines:
           onStart:
             - java -version
             - jfrog -v
+            - which jfrog
+            - which jf
+            - jf --version
           onExecute:
             - task: $res_gradle_build_task_gitrepo_resourcePath
               id: gradle-build-task
