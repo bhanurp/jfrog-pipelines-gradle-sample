@@ -2,10 +2,10 @@ version: 1
 type: gradle
 resolver:
   repo: jfrog-gradle-remote
-  serverId: pipeecosys
+  serverId: int_default_artifactory
 deployer:
   repo: jfrog-gradle-dev-local
-  serverId: pipeecosys
+  serverId: int_default_artifactory
   deployMavenDescriptors: true
   ivyPattern: '[organization]/[module]/ivy-[revision].xml'
   artifactPattern: '[organization]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]'
