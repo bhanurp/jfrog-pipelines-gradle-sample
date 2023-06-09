@@ -40,7 +40,7 @@ pipelines:
               input:
                 deployerSnapshotRepo: {{ .Values.deployerRepo }}
                 deployerReleaseRepo: {{ .Values.deployerRepo }}
-                configFileLocation: /.jfrog/projects
+                configFileLocation: /.jfrog/projects/
                 configFileName: gradle.yaml
                 resourceName: gradle_app
                 sourceLocation: ""
