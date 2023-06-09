@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       path: bhanurp/gradle-build
-      gitProvider: {{ .Values.gitProvider }}
+      gitProvider: gh_int_bhanu
       branches:
         include: ^{{ .Values.mainBranch }}$
       cloneProtocol: https
@@ -14,7 +14,7 @@ resources:
     type: GitRepo
     configuration:
       path: bhanurp/ jfrog-pipelines-gradle-sample
-      gitProvider: {{ .Values.gitProvider }}
+      gitProvider: gh_int_bhanu
       branches:
         include: ^{{ .Values.mainBranch }}$
       cloneProtocol: https
