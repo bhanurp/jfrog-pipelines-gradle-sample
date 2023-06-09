@@ -6,7 +6,4 @@ resolver:
 deployer:
   repo: jfrog-gradle-dev-local
   serverId: int_default_artifactory
-  deployMavenDescriptors: true
-  ivyPattern: '[organization]/[module]/ivy-[revision].xml'
-  artifactPattern: '[organization]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]'
-useWrapper: true
+useWrapper: false
