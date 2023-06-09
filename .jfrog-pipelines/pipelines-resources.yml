@@ -13,7 +13,7 @@ resources:
   - name: gradle_app
     type: GitRepo
     configuration:
-      path: bhanurp/ jfrog-pipelines-gradle-sample
+      path: bhanurp/jfrog-pipelines-gradle-sample
       gitProvider: gh_int_bhanu
       branches:
         include: ^{{ .Values.mainBranch }}$
