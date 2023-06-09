@@ -5,7 +5,7 @@ resources:
       path: bhanurp/gradle-build
       gitProvider: gh_int_bhanu
       branches:
-        include: ^{{ .Values.mainBranch }}$
+        include: main
       cloneProtocol: https
       buildOn:
         commit: true
@@ -16,7 +16,7 @@ resources:
       path: bhanurp/jfrog-pipelines-gradle-sample
       gitProvider: gh_int_bhanu
       branches:
-        include: ^{{ .Values.mainBranch }}$
+        include: master
       cloneProtocol: https
       buildOn:
         commit: true
