@@ -9,6 +9,7 @@ resources:
       cloneProtocol: https
       buildOn:
         commit: true
+
   - name: gradle_app
     type: GitRepo
     configuration:
