@@ -1,18 +1,23 @@
 pipelines:
   - name: gradle_pipelines_test
     configuration:
+      runtime:
+        type: image
+        image:
+          custom:
+            name: docker.jfrog.io/jfrog/pipelines-u20java
+            tag: "17"
+            registry: docker_registry
+            autoPull: true
       jfrogCliVersion: 2
+      environmentVariables:
+        readOnly:
+          JFROG_TASK_DEBUG: "true"
+          JFROG_CLI_LOG_LEVEL: debug
     steps:
       - name: gradle_build
         type: Bash
         configuration:
-          runtime:
-            type: image
-            image:
-              auto:
-                language: java
-                versions:
-                  - '8.0'
           inputResources:
             - name: gradle_build_task_gitrepo
             - name: gradle_app
@@ -31,8 +36,8 @@ pipelines:
               input:
                 deployerSnapshotRepo: {{ .Values.deployerRepo }}
                 deployerReleaseRepo: {{ .Values.deployerRepo }}
-                configFileLocation:   .jfrog/projects
-                configFileName:       gradle.yaml
-                resourceName: mvn_repo
+                configFileLocation: .jfrog/projects
+                configFileName: gradle.yaml
+                resourceName: gradle_app
                 sourceLocation: ""
                 gradleCommand: "clean artifactoryPublish"
