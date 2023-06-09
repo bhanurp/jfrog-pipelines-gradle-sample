@@ -1,5 +1,7 @@
 pipelines:
   - name: gradle_pipelines_test
+    configuration:
+      jfrogCliVersion: 2
     steps:
       - name: gradle_build
         type: Bash
