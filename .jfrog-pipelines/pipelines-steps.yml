@@ -31,6 +31,7 @@ pipelines:
             - curl -fL https://install-cli.jfrog.io | sh
             - jf --version
             - jf config show
+            - gradle --version
           onExecute:
             - task: $res_gradle_build_task_gitrepo_resourcePath
               id: gradle-build-task
