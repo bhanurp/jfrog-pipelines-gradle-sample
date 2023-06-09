@@ -28,6 +28,7 @@ pipelines:
             - name: int_default_artifactory
         execution:
           onStart:
+            - curl -fL https://install-cli.jfrog.io | sh
             - echo $PATH
             - java -version
             - jfrog -v
