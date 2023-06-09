@@ -42,4 +42,4 @@ pipelines:
                 configFileName: gradle.yaml
                 resourceName: gradle_app
                 sourceLocation: ""
-                gradleCommand: "clean artifactoryPublish"
+                gradleCommand: "clean build"

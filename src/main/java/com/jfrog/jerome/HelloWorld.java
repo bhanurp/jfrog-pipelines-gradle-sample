@@ -1,8 +1,19 @@
 package com.jfrog.jerome;
 
-public class HelloWorld {
+import org.joda.time.LocalTime;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+public class HelloWorld {
+  public static void main(String[] args) {
+    LocalTime currentTime = new LocalTime();
+    System.out.println("The current local time is: " + currentTime);
+
+    Greeter greeter = new Greeter();
+    System.out.println(greeter.sayHello());
+  }
+}
+
+class Greeter {
+    public String sayHello() {
+        return "Hello World";
     }
 }
