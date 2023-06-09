@@ -1,10 +1,10 @@
 version: 1
 type: gradle
 resolver:
-  repo: jerome-gradle-remote
+  repo: jfrog-gradle-remote
   serverId: Artifactory
 deployer:
-  repo: jerome--gradle-dev-local
+  repo: jfrog-gradle-dev-local
   serverId: Artifactory
   deployMavenDescriptors: true
   ivyPattern: '[organization]/[module]/ivy-[revision].xml'

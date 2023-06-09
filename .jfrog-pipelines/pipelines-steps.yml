@@ -29,12 +29,8 @@ pipelines:
         execution:
           onStart:
             - curl -fL https://install-cli.jfrog.io | sh
-            - echo $PATH
-            - java -version
-            - jfrog -v
-            - which jfrog
-            - which jf
             - jf --version
+            - jf config show
           onExecute:
             - task: $res_gradle_build_task_gitrepo_resourcePath
               id: gradle-build-task
