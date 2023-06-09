@@ -1,0 +1,33 @@
+pipelines:
+  - name: gradle_pipelines_test
+    steps:
+      - name: gradle_build
+        type: Bash
+        configuration:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - '8.0'
+          inputResources:
+            - name: gradle_build_task_gitrepo
+            - name: gradle_app
+          integrations:
+            - name: int_default_artifactory
+        execution:
+          onStart:
+            - java -version
+            - jfrog -v
+          onExecute:
+            - task: $res_gradle_build_task_gitrepo_resourcePath
+              id: gradle-build-task
+              input:
+                deployerSnapshotRepo: {{ .Values.deployerRepo }}
+                deployerReleaseRepo: {{ .Values.deployerRepo }}
+                configFileLocation:   .jfrog/projects
+                configFileName:       gradle.yaml
+                resourceName: mvn_repo
+                sourceLocation: ""
+                gradleCommand: "clean artifactoryPublish"
