@@ -25,6 +25,7 @@ pipelines:
             - name: int_default_artifactory
         execution:
           onStart:
+            - echo $PATH
             - java -version
             - jfrog -v
             - which jfrog
