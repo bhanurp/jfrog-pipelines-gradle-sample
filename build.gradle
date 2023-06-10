@@ -6,12 +6,6 @@ plugins {
 apply plugin: 'application'
 mainClassName = 'com.jfrog.jerome.HelloWorld'
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
-    }
-}
-
 
 dependencies {
     implementation "joda-time:joda-time:2.2"
