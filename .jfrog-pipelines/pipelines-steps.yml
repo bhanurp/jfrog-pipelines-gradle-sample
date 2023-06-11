@@ -24,6 +24,7 @@ pipelines:
           inputResources:
             - name: gradle_build_task_gitrepo
             - name: gradle_app
+            - name: mvn_publish_gitrepo
           integrations:
             - name: int_default_artifactory
         execution:
@@ -43,3 +44,13 @@ pipelines:
                 resourceName: gradle_app
                 sourceLocation: ""
                 gradleCommand: "clean artifactoryPublish -b build.gradle"
+
+            - task: $res_mvn_publish_gitrepo_resourcePath
+              id: maven-publish-task
+              input:
+                resourceName: gradle_app
+                sourceLocation: ""
+                autoPublishBuildInfo: true
+                xrayScan: true
+                failOnScan: 
+                retry: true

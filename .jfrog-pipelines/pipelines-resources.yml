@@ -20,3 +20,14 @@ resources:
       cloneProtocol: https
       buildOn:
         commit: true
+
+  - name: mvn_publish_gitrepo
+    type: GitRepo
+    configuration:
+      path: bhanurp/maven-publish
+      gitProvider: gh_int_bhanu
+      branches:
+        include: main
+      cloneProtocol: https
+      buildOn:
+        commit: true
