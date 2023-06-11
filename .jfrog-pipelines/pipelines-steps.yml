@@ -54,3 +54,6 @@ pipelines:
                 xrayScan: true
                 failOnScan: 
                 retry: true
+                
+          onComplete:
+            - echo "this is on complete section"
