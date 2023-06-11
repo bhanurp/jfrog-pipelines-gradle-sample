@@ -21,7 +21,7 @@ resources:
       buildOn:
         commit: true
 
-  - name: gradle_publish_gitrepo
+  - name: build_publish_gitrepo
     type: GitRepo
     configuration:
       path: bhanurp/build-publish
