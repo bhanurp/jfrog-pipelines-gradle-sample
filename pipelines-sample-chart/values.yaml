@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: platform-us.staging.gcp.devopsacc.team/jerome-docker-prod-local/hello-pipelines
+  repository: platform-us.staging.gcp.devopsacc.team/jfrog-docker-prod-local/hello-pipelines
   tag: latest
   pullPolicy: IfNotPresent
 

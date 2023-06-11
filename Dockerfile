@@ -1,5 +1,5 @@
 FROM busybox
-LABEL maintainer="jeromep@jfrog.com" description="JFrog pipelines sample"
+LABEL maintainer="bhanur@jfrog.com" description="JFrog pipelines sample"
 
 # add Gradle build output
 ADD build dist

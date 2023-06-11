@@ -1,4 +1,4 @@
-package com.jfrog.jerome;
+package com.jfrog;
 
 import org.joda.time.LocalTime;
 
