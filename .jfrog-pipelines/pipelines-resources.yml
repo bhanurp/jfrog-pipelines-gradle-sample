@@ -24,7 +24,7 @@ resources:
   - name: gradle_publish_gitrepo
     type: GitRepo
     configuration:
-      path: bhanurp/maven-publish
+      path: bhanurp/build-publish
       gitProvider: gh_int_bhanu
       branches:
         include: main
