@@ -25,6 +25,7 @@ pipelines:
             - name: gradle_build_task_gitrepo
             - name: gradle_app
             - name: build_publish_gitrepo
+            - name: cron_trigger_gradle
           integrations:
             - name: int_default_artifactory
         execution:

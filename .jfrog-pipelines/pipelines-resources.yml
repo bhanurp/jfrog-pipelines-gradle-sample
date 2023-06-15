@@ -31,3 +31,10 @@ resources:
       cloneProtocol: https
       buildOn:
         commit: true
+
+  - name: cron_trigger_gradle
+    type: CronTrigger
+    configuration:
+      interval: '*/30 * * * *'
+      branches:
+        include: ^main$
